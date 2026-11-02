@@ -1,0 +1,22 @@
+{
+  "name": "ai-constitution",
+  "version": "0.1.0",
+  "description": "Sign an AI policy document and audit receipts against it. SHA-256 canonical hash, optional Ed25519 signature, Markdown and JSON audit reports.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "README.md", "LICENSE-MIT", "LICENSE-APACHE"],
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc -p tsconfig.test.json",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["ai", "agents", "policy", "audit", "receipts", "compliance"],
+  "author": "Christiaan de Wet (https://github.com/christiaan839-beep)",
+  "license": "MIT OR Apache-2.0",
+  "repository": { "type": "git", "url": "git+https://github.com/christiaan839-beep/ai-constitution.git" },
+  "engines": { "node": ">=20" },
+  "devDependencies": { "@types/node": "^26.6.6", "typescript": "^7.0.2", "vitest": "^5.1.0" }
+}
